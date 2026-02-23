@@ -1,3 +1,14 @@
+-- ======================================================
+-- Silver DDL Script
+-- Creates all silver layer tables
+--
+-- HOW TO RUN:
+-- From project root folder (DataWarehouse):
+-- & "C:\Program Files\PostgreSQL\17\bin\psql.exe" -U postgres -d datawarehouse -f scripts/silver/silver_ddl.sql
+--
+-- ======================================================
+
+
 -- make sure you're connected to the DataWarehouse database
 select current_database();
 
@@ -6,13 +17,15 @@ SELECT schema_name
 FROM information_schema.schemata
 WHERE schema_name IN ('bronze', 'silver', 'gold');
 
+\set ON_ERROR_STOP on
+
 drop table if exists silver.crm_cust_info;
 create table silver.crm_cust_info (
 cst_id int,
 cst_key varchar(50),
 cst_firstname varchar(50),
 cst_lastname varchar(50),
-cst_material_status varchar(50),
+cst_marital_status varchar(50),
 cst_gndr varchar(50),
 cst_create_date DATE,
 dwh_create_date timestamptz default CURRENT_TIMESTAMP 
@@ -21,6 +34,7 @@ dwh_create_date timestamptz default CURRENT_TIMESTAMP
 drop table if exists silver.crm_prd_info;
 create table silver.crm_prd_info(
 prd_id int,
+cat_id VARCHAR(50),
 prd_key varchar(50),
 prd_nm varchar(50),
 prd_cost int,
@@ -35,9 +49,12 @@ create table silver.crm_sales_details(
 sls_ord_num varchar(50),
 sls_prd_key varchar(50),
 sls_cust_id int,
-sls_order_dt int,
-sls_ship_dt int,
-sls_due_dt int,
+sls_order_dt date,
+sls_ship_dt date,
+sls_due_dt date,
+old_sls_sales int,
+old_sls_quantity int,
+old_sls_price int,
 sls_sales int,
 sls_quantity int,
 sls_price int,
