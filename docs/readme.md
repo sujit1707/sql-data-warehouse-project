@@ -32,6 +32,7 @@ The warehouse is structured using three layers:
 ---
 
 ## Project Structure
+```
 data-warehouse-project
 │
 ├── analysis
@@ -94,7 +95,7 @@ data-warehouse-project
 │
 ├── README.md
 └── about_me.md
-
+```
 
 ---
 
