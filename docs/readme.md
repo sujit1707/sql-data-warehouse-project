@@ -35,64 +35,65 @@ The warehouse is structured using three layers:
 data-warehouse-project
 │
 ├── analysis
-│   │
-│   ├── docs
-│   │   └── Project Roadmap.png
-│   │
-│   ├── EDA
-│   │   ├── database_exploration.sql
-│   │   ├── date_exploration.sql
-│   │   ├── measures_exploration.sql
-│   │   ├── dimensions_exploration.sql
-│   │   ├── magnitude_exploration.sql
-│   │   └── ranking_exploration.sql
-│   │
-│   └── advanced_analytics
-│       ├── change_over_time_analysis.sql
-│       ├── cumulative_analysis.sql
-│       ├── part_to_whole_analysis.sql
-│       ├── data_segmentation.sql
-│       ├── performance_analysis.sql
-│       ├── customers_report.sql
-│       └── report_products.sql
+│ │
+│ ├── docs
+│ │ └── Project Roadmap.png
+│ │
+│ ├── EDA
+│ │ ├── database_exploration.sql
+│ │ ├── date_exploration.sql
+│ │ ├── measures_exploration.sql
+│ │ ├── dimensions_exploration.sql
+│ │ ├── magnitude_exploration.sql
+│ │ └── ranking_exploration.sql
+│ │
+│ └── advanced_analytics
+│ ├── change_over_time_analysis.sql
+│ ├── cumulative_analysis.sql
+│ ├── part_to_whole_analysis.sql
+│ ├── data_segmentation.sql
+│ ├── performance_analysis.sql
+│ ├── customers_report.sql
+│ └── report_products.sql
 │
 ├── scripts
-│   │
-│   ├── init_database.sql
-│   │
-│   ├── bronze
-│   │   ├── bronze_ddl.sql
-│   │   └── bronze_load.sql
-│   │
-│   ├── silver
-│   │   ├── silver_ddl.sql
-│   │   ├── silver_load.sql
-│   │   └── exploratory
-│   │       └── data_cleaning_tests.sql
-│   │
-│   └── gold
-│       └── gold_ddl.sql
+│ │
+│ ├── init_database.sql
+│ │
+│ ├── bronze
+│ │ ├── bronze_ddl.sql
+│ │ └── bronze_load.sql
+│ │
+│ ├── silver
+│ │ ├── silver_ddl.sql
+│ │ ├── silver_load.sql
+│ │ └── exploratory
+│ │ └── data_cleaning_scripts.sql
+│ │
+│ └── gold
+│ └── gold_ddl.sql
 │
 ├── docs
-│   ├── data_sources.drawio
-│   ├── data_integration.drawio
-│   ├── gold_layer_model.drawio
-│   ├── naming_conventions.md
-│   └── project_catalogue.md
+│ ├── data_sources.drawio
+│ ├── data_integration.drawio
+│ ├── gold_layer_model.drawio
+│ ├── naming_conventions.md
+│ └── project_catalogue.md
 │
 ├── dataset
-│   │
-│   ├── source_crm
-│   │   ├── cust_info.csv
-│   │   ├── prd_info.csv
-│   │   └── sales_details.csv
-│   │
-│   └── source_erp
-│       ├── cust_az12.csv
-│       ├── loc_a101.csv
-│       └── px_cat_g1v2.csv
+│ │
+│ ├── source_crm
+│ │ ├── cust_info.csv
+│ │ ├── prd_info.csv
+│ │ └── sales_details.csv
+│ │
+│ └── source_erp
+│ ├── cust_az12.csv
+│ ├── loc_a101.csv
+│ └── px_cat_g1v2.csv
 │
 ├── README.md
+└── about_me.md
 
 
 ---
@@ -185,8 +186,11 @@ This project demonstrates practical skills in:
 
 ## About Me
 
-This project is part of my journey toward developing skills in:
+## About Me
 
-- Data Engineering
-- Data Science
-- Machine Learning
+I’m currently building a strong foundation in data systems, analytics, and machine learning.  
+My focus is on understanding how raw data flows through real-world pipelines — from ingestion and cleaning to modeling and analytical reporting.
+
+This project is part of my effort to learn how data warehouses are designed and how analytical insights are extracted using SQL.
+
+Beyond SQL and data engineering concepts, I’m continuing to develop skills in Python, statistics, and machine learning with the goal of working in data science and applied ML roles.
